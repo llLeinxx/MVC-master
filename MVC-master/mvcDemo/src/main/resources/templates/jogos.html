@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogos favoritos</title>
+
+</head>
+<body>
+<h1> Lista dos jogos</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Nome do Jogo</th>
+        <th>Desenvolvedora</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jogo: ${jogos}" >
+        <td th:text="${jogo.nome}">Nome</td>
+        <td th:text="${jogo.desenvolvedora}" >desenvolvedora</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+</body>
+</html>
